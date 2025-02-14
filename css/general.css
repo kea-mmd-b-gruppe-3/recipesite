@@ -4,3 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  --hvid: #fffef9;
+  --cream: #faf9f5;
+  --orange: #e37c4b;
+  --green: #749170;
+}
