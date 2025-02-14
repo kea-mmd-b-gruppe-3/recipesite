@@ -4,31 +4,28 @@ Når man er flere der bidrager til en kodebase, lærer man hurtigt, at ens sædv
 Skriv derfor jeres fælles retningslinjer for punkterne herunder(tilføj gerne flere selv), sådan som det giver bedst mening for jer som gruppe. Dokumentationen sikre, at jeres fælles kodebase forbliver overskuelig, er let at arbejde med og til at forstå for alle, og at I undgå konflikter, og har nemmere ved at hjælpe hinanden undervejs.
 
 ## Projektstruktur:
-Beslut, hvordan I vil organisere jeres projekt – struktur for mapper og filer.
-- Hvordan organiserer I billeder, fonte og andre ressourcer?
-- Hvor placerer I boilerplate?(fx CSS- og JavaScript-filer, der bruges på tværs af projektet)
-- Hvor placerer I HTML, CSS- og JavaScript-filer til fx detaljevisning og listevisning?
+- Billeder ligger i img-mappen og fonte bliver sat ind 'head'.
+- Boilerplate er placeret herinde - en README.md fil, der ikke ligger i nogle mappe og inden i general.css
+- Vi har lavet mapper der hedder hver fil type (html, css, js), som indeholder de matchende filer
 
 ## Navngivning:
-Beslutte hvordan i vil navngive filer og mapper for at sikre en ensartet struktur og undgå forvirring.
-- Hvordan navngiver I filnavne? (fx små bogstaver, ingen mellemrum, brug af - eller _)
-- Hvordan sikre I at det er til at forstå hvilke HTML-, CSS- og JavaScript-filer der høre sammen?
+- Vi har givet navngivet de forskellige filer efter hvilken html.side det skal være og den matchende css fil hedder så samme navn som html-filen og det samme med js. js ligger inden i den js-mappe, css inden i en css-mapppe og html inden i en html-mappe (minus index-filen)
 
 ## Link til scripts:
-- Hvor placerer I script referencer i HTML'en? (fx i <head> med defer attribute, eller sidst i <body>)
+- Det placeres nederst i <body>
 
 ## Git branches:
-- Hvordan navngiver I branches, så alle kan forstår hvem der arbejder i branchen og på hvad?(fx feature-lotte-formular)
+- Vi navngiver branches ved at skrive 'feature-navn-hvad man har lavet' så fx. 'feature-victoria-footer'
 
 ## Arbejdsflow:
-- Hvordan fordeler I arbejdet, så I undgår at flere arbejder i de samme filer samtidigt?
-- Hvordan sikrer I, at commit-beskeder er beskrivende?
-- Hvordan kommunikerer i om ændringer i main branchen når feature merges?
+- Vi aftaler hvem der arbejder på hvad og så arbejder vi i/på hver vores branch/feature
+- Commit-beskeder bliver skrevet ved at skrive 'add' eller 'fix' og så hvad man har gjort. Fx. 'add footer with css styling'
+- Hvis noget skal merges så gør vi det sammen
 
 ## Kode:
-- Hvordan skriver i funktioner i JavaScript?(fx med function keyword eller som arrow functions)
-- Beslut hvilken CSS selector i benyttes til referener i henholdsvis CSS og JavaScript(fx. id'er til JavaScript og Classes til CSS)
-- Skal filer have korte forklaringer som kommentarer?
+- Vi skriver funktioner ind som vi lærte i sidste opgave, hvis det er forskelligt så sørger vi for at gennemgå det til sidst og evt. rette, så alle har styr på det
+- Når vi refererer i JS og CSS så bruger vi classes
+- Vi skriver så kommentarer og forklaringer ved fx. funktioner, fetch osv.
 
 # Funktionalitet
 Dette afsnit skal forklare hvad I konkret har arbejde med, for at udvikle websitet. Tænk over hvilke interaktioner brugeren kan foretage på sitet? Eller hvordan websitet håndterer og præsenterer data? Eksempler på funktionalitet, der kan beskrives:
