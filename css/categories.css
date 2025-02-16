@@ -1,0 +1,48 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+body {
+  background-image: url(../img/baggrund.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (min-width: 800px) {
+  .grid_1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  main {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
