@@ -12,6 +12,7 @@ html {
   --green: #749170;
 }
 
+/* specifikke fonte til specifikke html tags */
 h1 {
   font-family: "Kalnia", serif;
   font-optical-sizing: auto;
@@ -40,4 +41,301 @@ p {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+/* baggrundsbillede på alle sider */
+body {
+  background-image: url("../img/background.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: center; /* Centrerer indholdet horisontalt */
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+}
+
+/* LOGO */
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centrerer logoet horisontalt */
+  top: 10px; /* Rykker logoet ned fra toppen */
+}
+
+.logo img {
+  width: 100px; /* Mindre logo */
+  height: auto;
+  display: block;
+}
+
+/* MENU */
+.menu {
+  display: none; /* Skjuler menuen som standard på mobil */
+  flex-direction: column; /* Gør menuen vertikal på mobil */
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: transparent;
+  background: none; /* Fjern eventuel baggrund */
+  box-shadow: none; /* Fjern eventuelle skygger */
+  width: 200px;
+  padding: 10px 0;
+  list-style: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.menu :hover {
+  transform: scale(1.1);
+}
+
+.menu.active {
+  display: flex; /* Viser menuen, når burger-menuen er aktiv */
+}
+
+.menu li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-family: "Sometype Mono", serif;
+}
+
+/* SØGEIKON */
+.search_icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 45px;
+  right: 60px;
+}
+
+/* BURGER MENU */
+.burger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 20px;
+}
+
+.burger .line {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.grid_1-2-2 p {
+  font-family: "Sometype Mono", serif;
+}
+
+.footer_img img {
+  width: 100px; /* Størrelsen på billedet kan justeres */
+  height: auto; /* Bevarer billedets aspektforhold */
+}
+
+.footer_img {
+  display: flex; /* Gør .footer_img til en flex container */
+  justify-content: center; /* Centrerer billedet horisontalt */
+  align-items: center; /* Centrerer billedet vertikalt */
+  flex-direction: column; /* Gør, at billedet og teksten er stablet vertikalt */
+  margin-bottom: 20px;
+  margin-top: 800px; /* SKAL SLETTES */
+}
+
+footer {
+  display: flex;
+  flex-direction: column; /* Gør footer-sektionen vertikal */
+  justify-content: center; /* Centrerer footerindholdet horisontalt */
+  padding: 20px;
+  text-align: center; /* Centrerer al tekst i footer */
+}
+
+/* Grid til footer_info og newsletter */
+.grid_info {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Skaber to kolonner i første række */
+  gap: 15px; /* Skaber lidt afstand mellem kolonnerne */
+  width: 100%; /* Gør grid'et bredt nok til at fylde containeren */
+  max-width: 1200px; /* Begrænser bredden på grid'et */
+}
+
+/* Footer_info */
+.footer_info {
+  text-align: center; /* Centrerer teksten i .footer_info */
+  line-height: 40px;
+}
+
+.newsletter {
+  grid-column: 1 / span 2; /* Får newsletter til at fylde begge kolonner i anden række */
+  text-align: center;
+  padding: 8px 10;
+  background-color: #faf9f5;
+  border: 1px solid #749170;
+  border-radius: 8px; /* Rundede hjørner */
+  width: 90%; /* Gør kassen mindre ved at sætte en bredde */
+  max-width: 600px; /* Begrænser bredden, så den ikke bliver for bred */
+  margin: 0 auto; /* Centrerer kassen horisontalt */
+  margin-bottom: 80px;
+}
+
+.newsletter p {
+  line-height: 1.8;
+}
+
+.newsletter input {
+  margin: 5px;
+  padding: 10px;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.cta-button {
+  padding: 5px 30px;
+  background-color: #749170;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 4px;
+  margin: 4px 0;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+}
+
+input::placeholder {
+  color: #888; /* Gør placeholder-tekst lidt grålig */
+}
+
+/* DESKTOP-VERSION (Større end 768px) */
+@media screen and (min-width: 768px) {
+  /* MENU */
+  .menu {
+    display: flex; /* Gør menuen vandret */
+    flex-direction: row; /* Tvinger menuen til at blive vandret */
+    justify-content: space-evenly; /* Fordeler menupunkterne jævnt */
+    width: 50%; /* Gør menuen lidt smallere */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centrerer menuen */
+    background: none; /* Fjern eventuel baggrund */
+    box-shadow: none; /* Fjern eventuelle skygger */
+    margin-top: -8px;
+  }
+
+  /* Menu items */
+  .menu li {
+    list-style: none;
+    margin: 0; /* Sørger for ingen ekstra margin */
+  }
+
+  .menu a {
+    font-size: 25px;
+    text-decoration: none;
+    text-shadow: none; /* Fjerner tekst-skygge */
+    background: none; /* Fjern eventuel baggrund */
+    box-shadow: none; /* Fjern eventuel boks-skygge */
+  }
+
+  /* Skjul burger-menuen på desktop */
+  .burger {
+    display: none;
+  }
+
+  /* FOOTER */
+  .grid_1-2-2 {
+    margin-top: 800px; /* SKAL SLETTES */
+  }
+
+  .footer_img {
+    margin-top: -2px; /* SKAL SLETTES */
+  }
+
+  footer {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row; /* Gør footer-sektionen vandret */
+    justify-content: space-between; /* Placerer elementerne med plads imellem */
+    align-items: flex-start; /* Justerer elementerne til toppen */
+    padding: 10px; /* Reducer padding omkring hele footeren */
+    text-align: center; /* Centrerer al tekst i footer */
+  }
+
+  /* Footer billede */
+  .footer_img img {
+    width: 120px;
+    height: auto; /* Bevarer billedets aspektforhold */
+  }
+
+  /* Grid til footer_info og newsletter */
+  .grid_info {
+    display: flex;
+    justify-content: space-between; /* Placerer de 3 sektioner vandret */
+    gap: 15px; /* Skaber lidt afstand mellem kolonnerne */
+    width: 100%;
+    max-width: 1200px; /* Begrænser bredden på grid'et */
+  }
+
+  /* Footer_info */
+  .footer_info {
+    text-align: center; /* Centrerer teksten i .footer_info */
+    flex: 1; /* Gør hver .footer_info til at fylde lige meget */
+    padding: 0 10px; /* Reducerer padding */
+  }
+
+  .newsletter {
+    text-align: center;
+    padding: 8px 10px; /* Reducerer padding i newsletter */
+    background-color: #faf9f5;
+    border: 1px solid #749170;
+    border-radius: 8px; /* Rundede hjørner */
+    width: 270px; /* Reducerer bredden på kassen */
+    margin-top: 10px; /* Mindre margin-top */
+  }
+
+  /* Newsletter tekst */
+  .newsletter p {
+    line-height: 1.8;
+  }
+
+  /* Newsletter input */
+  .newsletter input {
+    margin: 5px;
+    padding: 8px; /* Reduceret padding */
+    width: 80%;
+    margin-top: 5px; /* Mindre margin-top */
+  }
+
+  /* Call to action button */
+  .cta-button {
+    padding: 5px 20px; /* Mindre padding på knappen */
+    background-color: #749170;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 5px; /* Mindre margin-top */
+  }
 }

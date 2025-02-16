@@ -32,9 +32,56 @@
     <title>Categories</title>
   </head>
   <body>
-    <header></header>
+    <header>
+      <!-- menu -->
+      <div class="logo">
+        <img src="/img/logo.svg" alt="logo" />
+      </div>
+      <nav>
+        <div class="search_icon">
+          <img src="/img/search_icon.svg" alt="search icon" />
+        </div>
+
+        <ul class="menu">
+          <li><a href="index.html" class="button_link">Welcome</a></li>
+          <li><a href="/html/categories.html" class="button_link">Categories</a></li>
+          <li><a href="/html/idcards.html" class="button_link">Id Cards</a></li>
+          <li><a href="/html/single_recipes.html" class="button_link">Single Recipes</a></li>
+        </ul>
+
+        <!-- burgermenu (kun på mobil) -->
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </nav>
+    </header>
+
     <main></main>
-    <footer></footer>
+    <footer class="grid_1-2-2">
+      <img src="/img/woman.svg" alt="woman" />
+      <div class="footer_info">
+        <div class="grid_info">
+          <p>EXPLORE</p>
+          <p>all recipies</p>
+          <p>categories</p>
+          <p>about</p>
+        </div>
+        <div class="footer_info">
+          <p>SOCIALS</p>
+          <p>instagram</p>
+          <p>instagram</p>
+        </div>
+        <div class="newsletter">
+          <p>NEWSLETTER</p>
+          <p>sign up and never miss a recipe</p>
+          <input type="text" placeholder="name" />
+          <input type="email" placeholder="email" />
+          <button class="cta-button">SUBSCRIBE</button>
+        </div>
+      </div>
+    </footer>
     <script src="/js/menu.js"></script>
     <script src="/js/categories.js"></script>
   </body>
