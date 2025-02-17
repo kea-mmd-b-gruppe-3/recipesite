@@ -184,6 +184,27 @@ footer {
 .footer_info {
   text-align: center; /* Centrerer teksten i .footer_info */
   line-height: 40px;
+  font-size: 20px;
+}
+
+.footer_info p:hover {
+  transform: scale(1.1);
+}
+
+.footer_info a {
+  text-decoration: none;
+  color: black;
+  font-family: "Sometype Mono", serif;
+  line-height: 2.8;
+  font-size: 20px;
+}
+
+.instagram:hover {
+  transform: scale(1.1);
+}
+
+.facebook:hover {
+  transform: scale(1.1);
 }
 
 .newsletter {
@@ -221,6 +242,10 @@ footer {
   margin-bottom: 20px;
 }
 
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
 input {
   padding: 4px;
   margin: 4px 0;
@@ -230,7 +255,9 @@ input {
 }
 
 input::placeholder {
-  color: #888; /* Gør placeholder-tekst lidt grålig */
+  color: black;
+  text-align: right;
+  font-family: "Sometype Mono", serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -342,6 +369,9 @@ input::placeholder {
     padding: 0 10px; /* Reducerer padding */
   }
 
+  .footer_info a {
+    font-size: 22px;
+  }
   .newsletter {
     text-align: center;
     padding: 8px 10px; /* Reducerer padding i newsletter */
