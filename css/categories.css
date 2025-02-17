@@ -25,7 +25,7 @@ h2 {
 h1 {
   text-transform: uppercase;
   text-align: center;
-  font-size: clamp(1.5rem, 3vw, 5rem);
+  font-size: clamp(1.6rem, 4vw, 7rem);
 }
 
 main {
@@ -52,6 +52,42 @@ h4 {
   font-variation-settings: "wdth" 100;
   text-transform: uppercase;
   font-size: clamp(1rem, 2vw, 3rem);
+  padding-bottom: 1rem;
+}
+
+/* Søgefelt */
+.center-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  width: 20rem;
+  background: white;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.search-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
 }
 
 @media (min-width: 800px) {
@@ -59,9 +95,21 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .center-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .search-container {
+    width: 35rem;
+  }
+
   main {
     margin-left: 10rem;
     margin-right: 10rem;
     margin-top: 15rem;
+  }
+
+  h4 {
+    padding-bottom: 2rem;
   }
 }
