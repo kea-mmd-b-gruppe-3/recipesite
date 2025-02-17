@@ -43,6 +43,11 @@ p {
   font-style: normal;
 }
 
+/* billeder bliver sat til max-width 100% */
+img {
+  max-width: 100%;
+}
+
 /* baggrundsbillede på alle sider */
 body {
   background-image: url("../img/background.webp");
@@ -79,15 +84,15 @@ header {
   display: none; /* Skjuler menuen som standard på mobil */
   flex-direction: column; /* Gør menuen vertikal på mobil */
   position: absolute;
-  top: 60px;
+  top: 90px;
+  margin-right: 10px;
   right: 0;
-  background-color: transparent;
-  background: none; /* Fjern eventuel baggrund */
+  background-color: #faf9f5;
   box-shadow: none; /* Fjern eventuelle skygger */
   width: 200px;
-  padding: 10px 0;
+  padding: 5px 50px;
   list-style: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid black; /* Sort kant rundt om teksten */
   text-align: center;
 }
 
@@ -106,15 +111,15 @@ header {
 
 .menu a {
   text-decoration: none;
-  color: #333;
+  color: black;
   font-size: 18px;
   font-family: "Sometype Mono", serif;
 }
 
 /* SØGEIKON */
 .search_icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: auto;
   cursor: pointer;
   position: absolute;
   top: 45px;
@@ -134,7 +139,7 @@ header {
 .burger .line {
   width: 30px;
   height: 4px;
-  background-color: #333;
+  background-color: black;
   margin: 5px 0;
   border-radius: 5px;
 }
@@ -145,7 +150,7 @@ header {
 }
 
 .footer_img img {
-  width: 100px; /* Størrelsen på billedet kan justeres */
+  width: 120px; /* Størrelsen på billedet kan justeres */
   height: auto; /* Bevarer billedets aspektforhold */
 }
 
@@ -179,6 +184,27 @@ footer {
 .footer_info {
   text-align: center; /* Centrerer teksten i .footer_info */
   line-height: 40px;
+  font-size: 20px;
+}
+
+.footer_info p:hover {
+  transform: scale(1.1);
+}
+
+.footer_info a {
+  text-decoration: none;
+  color: black;
+  font-family: "Sometype Mono", serif;
+  line-height: 2.8;
+  font-size: 20px;
+}
+
+.instagram:hover {
+  transform: scale(1.1);
+}
+
+.facebook:hover {
+  transform: scale(1.1);
 }
 
 .newsletter {
@@ -216,6 +242,10 @@ footer {
   margin-bottom: 20px;
 }
 
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
 input {
   padding: 4px;
   margin: 4px 0;
@@ -225,37 +255,71 @@ input {
 }
 
 input::placeholder {
-  color: #888; /* Gør placeholder-tekst lidt grålig */
+  color: black;
+  text-align: right;
+  font-family: "Sometype Mono", serif;
 }
 
-/* DESKTOP-VERSION (Større end 768px) */
 @media screen and (min-width: 768px) {
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between; /* Fordeler logo og menu */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  /* LOGO */
+  .logo {
+    position: absolute; /* Gør logoet ikke absolut positioneret */
+    margin: 0 auto; /* Centrerer logoet horisontalt */
+  }
+
+  .logo img {
+    width: 120px; /* Juster størrelsen på logoet, hvis nødvendigt */
+    height: auto;
+    display: block;
+  }
+
   /* MENU */
   .menu {
     display: flex; /* Gør menuen vandret */
-    flex-direction: row; /* Tvinger menuen til at blive vandret */
-    justify-content: space-evenly; /* Fordeler menupunkterne jævnt */
-    width: 50%; /* Gør menuen lidt smallere */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Centrerer menuen */
-    background: none; /* Fjern eventuel baggrund */
-    box-shadow: none; /* Fjern eventuelle skygger */
-    margin-top: -8px;
+    flex-direction: row;
+    width: auto; /* Fjern den faste bredde */
+    margin-right: 60px; /* Ryk menuen til venstre */
+    gap: 200px;
+    margin-top: 20px;
+    background: none;
+    box-shadow: none;
+    border: none;
   }
 
-  /* Menu items */
   .menu li {
     list-style: none;
-    margin: 0; /* Sørger for ingen ekstra margin */
+    margin: 0;
   }
 
   .menu a {
     font-size: 25px;
     text-decoration: none;
-    text-shadow: none; /* Fjerner tekst-skygge */
-    background: none; /* Fjern eventuel baggrund */
-    box-shadow: none; /* Fjern eventuel boks-skygge */
+    background: none;
+    box-shadow: none;
+  }
+
+  /* SØGEIKON */
+
+  .search_icon img {
+    width: 70px;
+    height: auto;
+  }
+  .search_icon {
+    position: absolute;
+    top: 40px;
+    right: 90px; /* Justerer placeringen af søgeikonet */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
   }
 
   /* Skjul burger-menuen på desktop */
@@ -268,8 +332,14 @@ input::placeholder {
     margin-top: 800px; /* SKAL SLETTES */
   }
 
+  /* Footer billede */
+  .footer_img img {
+    width: 180px;
+    height: auto; /* Bevarer billedets aspektforhold */
+  }
+
   .footer_img {
-    margin-top: -2px; /* SKAL SLETTES */
+    margin-top: 25px; /* SKAL SLETTES */
   }
 
   footer {
@@ -281,12 +351,6 @@ input::placeholder {
     align-items: flex-start; /* Justerer elementerne til toppen */
     padding: 10px; /* Reducer padding omkring hele footeren */
     text-align: center; /* Centrerer al tekst i footer */
-  }
-
-  /* Footer billede */
-  .footer_img img {
-    width: 120px;
-    height: auto; /* Bevarer billedets aspektforhold */
   }
 
   /* Grid til footer_info og newsletter */
@@ -305,6 +369,9 @@ input::placeholder {
     padding: 0 10px; /* Reducerer padding */
   }
 
+  .footer_info a {
+    font-size: 22px;
+  }
   .newsletter {
     text-align: center;
     padding: 8px 10px; /* Reducerer padding i newsletter */

@@ -1,0 +1,102 @@
+.whisk img {
+  width: 150px;
+  height: auto; /* Bevarer proportionerne */
+}
+
+.whisk {
+  margin-top: 150px;
+  margin-left: 350px;
+}
+
+h1 {
+  font-size: 42px;
+  text-align: center;
+  margin-top: -10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 40px;
+}
+
+.text {
+  background-color: #faf9f5;
+  border: 2px solid black; /* Sort kant rundt om teksten */
+  padding: 15px 30px; /* Øger luft over og under teksten */
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+p {
+  text-align: center;
+  line-height: 1.8;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Sometype Mono", serif;
+}
+
+.plate img {
+  width: 250px;
+}
+.plate {
+  margin-top: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content; /* Eller en specifik bredde, hvis du ønsker det */
+}
+
+.plate p {
+  margin-top: -140px;
+  font-family: "Kalnia", serif;
+}
+
+.plate a {
+  text-decoration: none;
+  color: black;
+}
+
+.plate p:hover {
+  transform: scale(1.15);
+  color: #749170;
+}
+
+/* DESKTOP-VERSION (Større end 768px) */
+@media screen and (min-width: 768px) {
+  .whisk img {
+    width: 250px;
+    height: auto; /* Bevarer proportionerne */
+  }
+
+  .whisk {
+    display: block;
+    margin-left: auto;
+    margin-top: 180px;
+    margin-right: 120px;
+    width: fit-content;
+  }
+
+  h1 {
+    font-size: 80px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 80px;
+  }
+
+  .text {
+    margin-left: 350px;
+    margin-right: 350px;
+  }
+
+  p {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .plate img {
+    width: 280px;
+  }
+
+  .plate p {
+    margin-top: -150px;
+    font-size: 20px;
+  }
+}
