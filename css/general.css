@@ -43,6 +43,11 @@ p {
   font-style: normal;
 }
 
+/* billeder bliver sat til max-width 100% */
+img {
+  max-width: 100%;
+}
+
 /* baggrundsbillede på alle sider */
 body {
   background-image: url("../img/background.webp");
