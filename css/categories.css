@@ -34,6 +34,15 @@ main {
   margin-top: 12rem;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.category img:hover {
+  transform: scale(1.04);
+}
+
 /* links til category side */
 h4 {
   font-family: "Kalnia", serif;
