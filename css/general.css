@@ -324,7 +324,7 @@ input::placeholder {
   .newsletter input {
     margin: 5px;
     padding: 8px; /* Reduceret padding */
-    width: 80%;
+    width: 79%;
     margin-top: 5px; /* Mindre margin-top */
   }
 
