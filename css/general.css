@@ -52,7 +52,7 @@ img {
 body {
   background-image: url("../img/background.webp");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 /* HEADER */
