@@ -43,3 +43,7 @@ h1 {
   color: #faf9f5;
   font-family: "Nunito", serif;
 }
+
+.id_card a:hover {
+  transform: scale(1.1);
+}

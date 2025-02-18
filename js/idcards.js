@@ -22,7 +22,7 @@ function showList(products) {
           <h3>${product.name}</h3>
           <p>${product.difficulty} // Cooking time: ${product.cookTimeMinutes} min</p>
           <p>Rating: ${product.rating}★</p>
-        <a href="single_recipes.html">Go to Recipe</a>
+        <a href="'https://dummyjson.com/recipes/${product.id}'">Go to Recipe</a>
         </div>
         `
     )
