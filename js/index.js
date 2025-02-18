@@ -23,8 +23,4 @@
 //         <a href="/html/categories.html">
 //           <p>DISCOVER HERE!</p>
 //         </a>
-//       </div>
-//     `;
-
-//   mainContainer.innerHTML = markup;
-// });
+//  
