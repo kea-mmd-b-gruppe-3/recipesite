@@ -1,0 +1,121 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  padding-bottom: 20px;
+}
+
+h1 {
+  padding-top: 150px;
+  text-align: center;
+  font-size: clamp(1.6rem, 4vw, 7rem);
+  margin-top: 150px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 400;
+  color: rgb(243, 116, 55);
+}
+
+.grid_1-1 {
+  display: grid;
+  background-color: #faf9f5;
+  border: 2px solid black;
+  border-radius: 5px;
+  justify-content: center;
+  margin: 40px 70px;
+  padding: 25px 20px;
+  gap: 10px;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+.ingredients ul {
+  line-height: 2.5rem;
+  list-style: none;
+  font-family: "Nunito", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.step_by_step ul {
+  line-height: 2.5rem;
+  list-style: none;
+  font-family: "Nunito", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.grid_1-1 p {
+  display: flex;
+  place-self: start;
+}
+
+.step_by_step {
+  padding-top: 2rem;
+}
+
+.info h3 {
+  padding-top: 3rem;
+}
+
+/* DESKTOP-VERSION (Større end 768px) */
+@media screen and (min-width: 768px) {
+  header {
+    padding-bottom: 30px;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 70px 170px;
+    padding: 50px;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .grid_1-1 img {
+    grid-column: 1;
+    object-fit: cover;
+    width: auto;
+    border-radius: 5px;
+  }
+
+  .info {
+    grid-column: 2;
+    text-align: center;
+    justify-content: center;
+    line-height: 3rem;
+    padding-top: 6rem;
+  }
+
+  .ingredients {
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .step_by_step {
+    grid-column: 2;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  h3 {
+    font-weight: bolder;
+    padding-bottom: 10px;
+  }
+
+  .info h3 {
+    padding-top: 0;
+  }
+}
