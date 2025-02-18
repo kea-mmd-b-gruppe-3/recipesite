@@ -1,13 +1,12 @@
-// ------------ filterings funktion altså option
-// const selectElement = document.querySelector("selectElement");
-// selectElement.addEventListener("change");
+const mySingleRecipe = new URLSearchParams(window.location.search).get("id");
+
 
 // ------------ normal json
 // Henter containeren, hvor opskriften skal indsættes//
 const listContainer = document.querySelector(".recipe_container");
 
 // Henter data fra API'et//
-fetch("https://dummyjson.com/recipes/1")
+fetch(`https://dummyjson.com/recipes/${mySingleRecipe}`)
   .then((res) => res.json()) // Konverterer svaret til JSON//
   .then(
     (data) =>

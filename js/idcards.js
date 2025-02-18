@@ -1,9 +1,13 @@
 const myMealType = new URLSearchParams(window.location.search).get("meal-type");
+let url = `https://dummyjson.com/recipes`;
+if (myMealType) {
+  url = `https://dummyjson.com/recipes/meal-type/${myMealType}`;
+}
 
 // ------------ normal json
 const listContainer = document.querySelector(".grid_1-1-1");
 
-fetch(`https://dummyjson.com/recipes/meal-type/${myMealType}`)
+fetch(url)
   .then((response) => response.json())
   // skriver () efter .json fordi det er en funktion der allerede findes og vi kalder på den via ()
   .then((json) => {
@@ -34,7 +38,7 @@ function showList(products) {
           <h3>${product.name}</h3>
           <p>${product.difficulty} // Cooking time: ${product.cookTimeMinutes} min</p>
           <p>Rating: ${product.rating}★</p>
-        <a href="'https://dummyjson.com/recipes/${product.id}'">Go to Recipe</a>
+        <a href="single_recipes.html?id=${product.id}">Go to Recipe</a>
         </div>
         `
     )

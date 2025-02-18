@@ -51,8 +51,8 @@ img {
 /* baggrundsbillede på alle sider */
 body {
   background-image: url("../img/background.webp");
-  background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* HEADER */
