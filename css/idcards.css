@@ -8,12 +8,12 @@ h1 {
 .grid_1-1-1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: auto; /* Vigtigt for subgrid */
+  grid-template-rows: auto;
   gap: 10px;
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 10px;
-  margin-top: 120px;
+  margin-top: 50px;
 }
 
 .id_card {
@@ -33,10 +33,40 @@ h1 {
   border-radius: 5px;
 }
 
-a {
+.id_card a {
   background-color: #749170;
   padding: 5px 20px;
   text-align: center;
   border-radius: 10px;
   margin: auto;
+  text-decoration: none;
+  color: #faf9f5;
+  font-family: "Nunito", serif;
+}
+
+.id_card a:hover {
+  transform: scale(1.1);
+}
+
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #749170;
+  padding: 5px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+  text-decoration: none;
+  color: #faf9f5;
+  font-family: "Nunito", serif;
+  border: none;
+  margin: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
