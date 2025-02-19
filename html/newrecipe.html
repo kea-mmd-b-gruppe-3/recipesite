@@ -6,7 +6,7 @@
 
     <!-- css -->
     <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/idcards.css" />
+    <link rel="stylesheet" href="../css/newrecipe.css" />
     <link rel="stylesheet" href="../css/menu.css" />
 
     <!-- favicon -->
@@ -54,30 +54,50 @@
     </header>
 
     <main>
-      <h1>recipes:</h1>
+      <h1>add new recipe:</h1>
 
-      <div class="filter">
-        <button data-difficulty="All">All</button>
-        <button data-difficulty="Easy">Easy</button>
-        <button data-difficulty="Medium">Medium</button>
-      </div>
+      <div class="new_product">
+        <div>
+            <img src="../img/upload-image.svg" alt="default image" class="upload-image">
+          <p class="button">Upload image</p>
+        </div>
+        <div>
+          <div class="grid_1-1">
+            <p>Recipe name:</p>
+            <input type="text" name="Recipe name" placeholder="type here" />
+          </div>
 
-      <!-- <select name="" id="selectElement">
-        <option value="all">Show all recipies</option>
-        <option value="easy">Show all easy</option>
-        <option value="medium">Show all medium</option>
-        <option value="vegetarian">Show all vegetarian</option>
-      </select> -->
+          <div class="grid_1-1">
+            <p>Difficulty:</p>
+            <input type="text" name="add difficulty" placeholder="type here" />
+          </div>
 
+          <div class="grid_1-1">
+            <p>Cooktime minutes:</p>
+            <input type="text" name="add cook time" placeholder="type here" />
+          </div>
 
-      <div class="grid_1-1-1">
-        <!-- <div class="id_card">
-          <img src="https://cdn.dummyjson.com/recipe-images/9.webp" alt="picture of food related to the recipe" />
-          <h3>recipe title</h3>
-          <p>difficulty // Cooking time: xx min</p>
-          <p>Rating: x.x★</p>
-          <a href="single_recipes.html" >Go to Recipe</a>
-        </div> -->
+          <div class="grid_1-1">
+            <p>Preptime minutes:</p>
+            <input type="text" name="add prep time" placeholder="type here" />
+          </div>
+
+          <div class="grid_1-1">
+            <p>Add servings:</p>
+            <input type="text" name="add servings" placeholder="type here" />
+          </div>
+
+          <div class="grid_1-1">
+            <p>Add ingredients:</p>
+            <input type="text" name="add ingridient" placeholder="type here" />
+            <p class="button2">+</p>
+          </div>
+
+          <div class="grid_1-1">
+            <p>Add instructions:</p>
+            <input type="text" name="add instructions" placeholder="type here" />
+          </div>
+        </div>
       </div>
     </main>
 
