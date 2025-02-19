@@ -52,6 +52,7 @@ nav {
   font-weight: 400;
   font-style: normal;
   font-size: 20px;
+  text-transform: lowercase;
 }
 
 .menu a:hover {

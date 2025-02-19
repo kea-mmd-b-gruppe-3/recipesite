@@ -50,14 +50,19 @@ img {
 
 /* baggrundsbillede på alle sider */
 body {
-  background-image: url("../img/background.webp");
+  background-image: url("../img/baggrund.webp");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* FOOTER */
 .grid_1-2-2 p {
   font-family: "Sometype Mono", serif;
+}
+
+.grid_1-2-2 {
+  margin-top: 2rem;
 }
 
 .footer_img img {
@@ -71,7 +76,6 @@ body {
   align-items: center; /* Centrerer billedet vertikalt */
   flex-direction: column; /* Gør, at billedet og teksten er stablet vertikalt */
   margin-bottom: 20px;
-  margin-top: 800px; /* SKAL SLETTES */
 }
 
 footer {
@@ -174,7 +178,7 @@ input::placeholder {
 @media screen and (min-width: 768px) {
   /* FOOTER */
   .grid_1-2-2 {
-    margin-top: 800px; /* SKAL SLETTES */
+    margin-top: 4rem;
   }
 
   /* Footer billede */
