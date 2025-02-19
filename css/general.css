@@ -50,9 +50,10 @@ img {
 
 /* baggrundsbillede på alle sider */
 body {
-  background-image: url("../img/background.webp");
+  background-image: url("../img/baggrund.webp");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* FOOTER */
