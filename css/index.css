@@ -4,7 +4,6 @@
 }
 
 .whisk {
-  margin-top: 150px;
   margin-left: 350px;
 }
 
@@ -38,11 +37,12 @@ p {
   width: 250px;
 }
 .plate {
-  margin-top: 60px;
+  margin-top: 30px;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: fit-content; /* Eller en specifik bredde, hvis du ønsker det */
+  margin-bottom: 9rem;
 }
 
 .plate p {
@@ -55,9 +55,13 @@ p {
   color: black;
 }
 
-.plate p:hover {
+/* .plate p:hover {
   transform: scale(1.15);
   color: #749170;
+} */
+
+.plate:hover {
+  transform: scale(1.04);
 }
 
 /* DESKTOP-VERSION (Større end 768px) */
@@ -70,7 +74,6 @@ p {
   .whisk {
     display: block;
     margin-left: auto;
-    margin-top: 180px;
     margin-right: 120px;
     width: fit-content;
   }
@@ -89,6 +92,10 @@ p {
   p {
     margin-top: 20px;
     font-size: 22px;
+  }
+
+  .plate {
+    margin-bottom: 12rem;
   }
 
   .plate img {
