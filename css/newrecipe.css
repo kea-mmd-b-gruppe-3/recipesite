@@ -38,6 +38,10 @@ img {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+.button:hover{
+  transform: scale(1.1);
+
+}
 
 .grid_1-1 {
   display: grid;
