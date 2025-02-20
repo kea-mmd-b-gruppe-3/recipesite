@@ -14,7 +14,7 @@ fetch(`https://dummyjson.com/recipes/${mySingleRecipe}`)
         <h1>${data.name}</h1>
         <div class="grid_1-1">
             <!-- Viser billedet af opskriften -->
-        <img src="https://cdn.dummyjson.com/recipe-images/${data.id}.webp" width="455" height="455" alt="tester"/>
+        <img src="https://cdn.dummyjson.com/recipe-images/${data.id}.webp" alt="tester"/>
             <!-- Viser forberedelsestid, tilberedningstid, antal portioner og sværhedsgrad -->
         <div class="info">
         <h3>Preptime minutes: ${data.prepTimeMinutes}</h3> 
